@@ -453,15 +453,6 @@
                                 <sourceMapRoot>${sourceMap.sourceMapRoot}</sourceMapRoot>
                             </sourceMap>
                         </configuration>
-                        <executions>
-                            <execution>
-                                <id>optimize</id>
-                                <phase>prepare-package</phase>
-                                <goals>
-                                    <goal>optimize</goal>
-                                </goals>
-                            </execution>
-                        </executions>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
