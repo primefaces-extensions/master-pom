@@ -298,12 +298,6 @@
                     <groupId>org.primefaces.extensions</groupId>
                     <artifactId>resources-optimizer-maven-plugin</artifactId>
                     <version>2.0.0-SNAPSHOT</version>
-                    <configuration>
-                        <sourceMap>
-                            <outputDir>${sourceMap.outputDir}</outputDir>
-                            <sourceMapRoot>${sourceMap.sourceMapRoot}</sourceMapRoot>
-                        </sourceMap>
-                    </configuration>
                     <executions>
                         <execution>
                             <id>optimize</id>
@@ -453,6 +447,12 @@
                     <plugin>
                         <groupId>org.primefaces.extensions</groupId>
                         <artifactId>resources-optimizer-maven-plugin</artifactId>
+                        <configuration>
+                            <sourceMap>
+                                <outputDir>${sourceMap.outputDir}</outputDir>
+                                <sourceMapRoot>${sourceMap.sourceMapRoot}</sourceMapRoot>
+                            </sourceMap>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>optimize</id>
@@ -523,7 +523,7 @@
         <primefaces.core.version>5.2</primefaces.core.version>
         <primefaces.theme.version>1.0.10</primefaces.theme.version>
         
-        <withoutCompress>false</withoutCompress>
+        <withoutCompress>true</withoutCompress>
         <sourceMap.outputDir>${project.build.directory}/sourcemap/</sourceMap.outputDir>
         <sourceMap.sourceMapRoot>http://localhost:8080/primeext-showcase/</sourceMap.sourceMapRoot>
     </properties>
