@@ -494,7 +494,7 @@
                     </plugin>
                 </plugins>
             </build>
-            
+
             <properties>
                 <withoutCompress>false</withoutCompress>
                 <sourceMap.create>true</sourceMap.create>
@@ -509,9 +509,9 @@
         <project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
 
         <jsf.version>2.2.8</jsf.version>
-        <primefaces.core.version>5.2</primefaces.core.version>
+        <primefaces.core.version>5.3.RC1</primefaces.core.version>
         <primefaces.theme.version>1.0.10</primefaces.theme.version>
-        
+
         <withoutCompress>true</withoutCompress>
         <sourceMap.create>false</sourceMap.create>
         <sourceMap.outputDir>${project.build.directory}/sourcemap/</sourceMap.outputDir>
