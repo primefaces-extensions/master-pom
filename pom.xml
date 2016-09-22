@@ -1,10 +1,4 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
-
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.primefaces.extensions</groupId>
     <artifactId>master-pom</artifactId>
@@ -42,11 +36,36 @@
     <inceptionYear>2011</inceptionYear>
 
     <scm>
-        <connection>scm:git:git@github.com:primefaces-extensions/master-pom.git</connection>
-        <developerConnection>scm:git:git@github.com:primefaces-extensions/master-pom.git</developerConnection>
+        <connection>scm:git:git://github.com/primefaces-extensions/master-pom.git</connection>
+        <developerConnection>scm:git:ssh://github.com:primefaces-extensions/master-pom.git</developerConnection>
         <url>https://github.com/primefaces-extensions/master-pom</url>
         <tag>HEAD</tag>
     </scm>
+
+    <properties>
+        <resources.dir.compressed>${project.build.directory}/classes/META-INF/resources/primefaces-extensions</resources.dir.compressed>
+        <java.version.source>1.7</java.version.source>
+        <java.version.target>1.7</java.version.target>
+        <project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
+
+        <commons-collections.version>3.2.1</commons-collections.version>
+        <commons-fileupload.version>1.2.2</commons-fileupload.version>
+        <commons-io.version>2.4</commons-io.version>
+        <commons-lang3.version>3.1</commons-lang3.version>
+        <gson.version>2.2.4</gson.version>
+        <itext.version>2.1.7</itext.version>
+        <jsf.version>2.2.8</jsf.version>
+        <poi.version>3.9</poi.version>
+
+        <primefaces.core.version>6.1-SNAPSHOT</primefaces.core.version>
+        <primefaces.theme.version>1.0.10</primefaces.theme.version>
+        <primefaces.optimizer.version>2.1.0</primefaces.optimizer.version>
+
+        <withoutCompress>true</withoutCompress>
+        <sourceMap.create>false</sourceMap.create>
+        <sourceMap.outputDir>${project.build.directory}/sourcemap/</sourceMap.outputDir>
+        <sourceMap.sourceMapRoot>http://localhost:8080/primeext-showcase/</sourceMap.sourceMapRoot>
+    </properties>
 
     <developers>
         <developer>
@@ -70,6 +89,16 @@
                 <role>Developer</role>
             </roles>
             <timezone>+1</timezone>
+        </developer>
+        <developer>
+            <id>melloware</id>
+            <name>Emil Lefkof</name>
+            <email>mellowaredev@gmail.com</email>
+            <roles>
+                <role>Buildmaster</role>
+                <role>Developer</role>
+            </roles>
+            <timezone>America/New_York</timezone>
         </developer>
         <developer>
             <id>mali</id>
@@ -116,25 +145,47 @@
             </roles>
             <timezone>+1</timezone>
         </developer>
+        <developer>
+            <id>rapster</id>
+            <name>Sébastien Lepage</name>
+            <email>sebastien.lepage@outlook.com</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
     </developers>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+        </plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>2.4</version>
+                    <version>2.6</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clean-plugin</artifactId>
-                    <version>2.6.1</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.2</version>
+                    <version>3.5.1</version>
                     <configuration>
                         <source>${java.version.source}</source>
                         <target>${java.version.target}</target>
@@ -147,29 +198,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>2.3</version>
+                    <version>2.10</version>
                     <extensions>true</extensions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.7</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-eclipse-plugin</artifactId>
-                    <version>2.8</version>
-                    <configuration>
-                        <useProjectReferences>false</useProjectReferences>
-                        <downloadSources>true</downloadSources>
-                        <wtpversion>2.0</wtpversion>
-                        <classpathContainers>
-                            <classpathContainer>
-                                org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6
-                            </classpathContainer>
-                        </classpathContainers>
-                        <packaging>${project.packaging}</packaging>
-                    </configuration>
+                    <version>2.8.2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -185,12 +220,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-install-plugin</artifactId>
-                    <version>2.4</version>
+                    <version>2.5.2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>2.4</version>
+                    <version>3.0.2</version>
                     <configuration>
                         <archive>
                             <addMavenDescriptor>false</addMavenDescriptor>
@@ -208,7 +243,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.9</version>
+                    <version>2.10.4</version>
                     <configuration>
                         <source>${java.version.source}</source>
                         <detectJavaApiLink>false</detectJavaApiLink>
@@ -218,21 +253,23 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>2.4.1</version>
+                    <version>2.5.3</version>
                     <configuration>
-                        <releaseProfiles>release</releaseProfiles>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
+                        <useReleaseProfile>false</useReleaseProfile>
+                        <releaseProfiles>release</releaseProfiles>
+                        <goals>deploy</goals>
                     </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>2.6</version>
+                    <version>3.0.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>2.2.1</version>
+                    <version>3.0.1</version>
                     <executions>
                         <execution>
                             <id>attach-sources</id>
@@ -246,7 +283,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.11</version>
+                    <version>2.19.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.felix</groupId>
@@ -275,7 +312,7 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>buildnumber-maven-plugin</artifactId>
-                    <version>1.0</version>
+                    <version>1.4</version>
                     <executions>
                         <execution>
                             <id>generate-timestamp</id>
@@ -297,7 +334,7 @@
                 <plugin>
                     <groupId>org.primefaces.extensions</groupId>
                     <artifactId>resources-optimizer-maven-plugin</artifactId>
-                    <version>2.0.0</version>
+                    <version>${primefaces.optimizer.version}</version>
                     <configuration>
                         <sourceMap>
                             <create>${sourceMap.create}</create>
@@ -321,33 +358,38 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- PrimeFaces -->
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.9</version>
-                <scope>test</scope>
+                <groupId>org.primefaces</groupId>
+                <artifactId>primefaces</artifactId>
+                <version>${primefaces.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.primefaces.themes</groupId>
+                <artifactId>all-themes</artifactId>
+                <version>${primefaces.theme.version}</version>
             </dependency>
 
             <!-- Commons -->
             <dependency>
                 <groupId>commons-collections</groupId>
                 <artifactId>commons-collections</artifactId>
-                <version>3.2.1</version>
+                <version>${commons-collections.version}</version>
             </dependency>
             <dependency>
                 <groupId>commons-fileupload</groupId>
                 <artifactId>commons-fileupload</artifactId>
-                <version>1.2.2</version>
+                <version>${commons-fileupload.version}</version>
             </dependency>
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
-                <version>2.4</version>
+                <version>${commons-io.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.1</version>
+                <version>${commons-lang3.version}</version>
             </dependency>
 
             <!-- Java API's -->
@@ -391,14 +433,14 @@
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
-                <version>2.2.4</version>
+                <version>${gson.version}</version>
             </dependency>
 
             <!-- Exporter dependencies -->
             <dependency>
                 <groupId>com.lowagie</groupId>
                 <artifactId>itext</artifactId>
-                <version>2.1.7</version>
+                <version>${itext.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>bouncycastle</groupId>
@@ -417,28 +459,34 @@
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi</artifactId>
-                <version>3.9</version>
+                <version>${poi.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
-                <version>3.9</version>
+                <version>${poi.version}</version>
             </dependency>
 
-
-            <!-- PrimeFaces -->
+            <!-- Test -->
             <dependency>
-                <groupId>org.primefaces</groupId>
-                <artifactId>primefaces</artifactId>
-                <version>${primefaces.core.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.primefaces.themes</groupId>
-                <artifactId>all-themes</artifactId>
-                <version>${primefaces.theme.version}</version>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.9</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
     <profiles>
         <profile>
@@ -458,7 +506,7 @@
                             <execution>
                                 <id>attach-sources</id>
                                 <goals>
-                                    <goal>jar</goal>
+                                    <goal>jar-no-fork</goal>
                                 </goals>
                             </execution>
                         </executions>
@@ -481,7 +529,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.4</version>
+                        <version>1.5</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -501,20 +549,4 @@
             </properties>
         </profile>
     </profiles>
-
-    <properties>
-        <resources.dir.compressed>${project.build.directory}/classes/META-INF/resources/primefaces-extensions</resources.dir.compressed>
-        <java.version.source>1.6</java.version.source>
-        <java.version.target>1.6</java.version.target>
-        <project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
-
-        <jsf.version>2.2.8</jsf.version>
-        <primefaces.core.version>6.1-SNAPSHOT</primefaces.core.version>
-        <primefaces.theme.version>1.0.10</primefaces.theme.version>
-
-        <withoutCompress>true</withoutCompress>
-        <sourceMap.create>false</sourceMap.create>
-        <sourceMap.outputDir>${project.build.directory}/sourcemap/</sourceMap.outputDir>
-        <sourceMap.sourceMapRoot>http://localhost:8080/primeext-showcase/</sourceMap.sourceMapRoot>
-    </properties>
 </project>
