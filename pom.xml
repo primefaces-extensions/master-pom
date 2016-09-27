@@ -44,8 +44,8 @@
 
     <properties>
         <resources.dir.compressed>${project.build.directory}/classes/META-INF/resources/primefaces-extensions</resources.dir.compressed>
-        <java.version.source>1.7</java.version.source>
-        <java.version.target>1.7</java.version.target>
+        <java.version.source>1.6</java.version.source>
+        <java.version.target>1.6</java.version.target>
         <project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
 
         <commons-collections.version>3.2.1</commons-collections.version>
@@ -69,7 +69,7 @@
 
     <developers>
         <developer>
-            <id>andraschko</id>
+            <id>tandraschko</id>
             <name>Thomas Andraschko</name>
             <email>andraschko.thomas@gmail.com</email>
             <roles>
@@ -146,7 +146,7 @@
             <timezone>+1</timezone>
         </developer>
         <developer>
-            <id>rapster</id>
+            <id>Rapster</id>
             <name>Sébastien Lepage</name>
             <email>sebastien.lepage@outlook.com</email>
             <roles>
