@@ -548,5 +548,12 @@
                 <sourceMap.create>true</sourceMap.create>
             </properties>
         </profile>
+        <profile>
+            <id>compress</id>
+            <properties>
+                <withoutCompress>false</withoutCompress>
+                <sourceMap.create>true</sourceMap.create>
+            </properties>
+        </profile>
     </profiles>
 </project>
