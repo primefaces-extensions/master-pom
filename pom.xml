@@ -57,7 +57,7 @@
         <jsf.version>2.2.8</jsf.version>
         <poi.version>3.9</poi.version>
 
-        <primefaces.core.version>6.1.RC1</primefaces.core.version>
+        <primefaces.core.version>6.1.RC2</primefaces.core.version>
         <primefaces.theme.version>1.0.10</primefaces.theme.version>
         <primefaces.optimizer.version>2.1.0</primefaces.optimizer.version>
 
