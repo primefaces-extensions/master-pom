@@ -36,8 +36,8 @@
     <inceptionYear>2011</inceptionYear>
 
     <scm>
-        <connection>scm:git:git://github.com/primefaces-extensions/master-pom.git</connection>
-        <developerConnection>scm:git:ssh://github.com:primefaces-extensions/master-pom.git</developerConnection>
+        <connection>scm:git:git@github.com:primefaces-extensions/master-pom.git</connection>
+        <developerConnection>scm:git:git@github.com:primefaces-extensions/master-pom.git</developerConnection>
         <url>https://github.com/primefaces-extensions/master-pom</url>
         <tag>HEAD</tag>
     </scm>
