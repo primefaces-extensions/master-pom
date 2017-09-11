@@ -48,14 +48,14 @@
         <java.version.target>1.6</java.version.target>
         <project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
 
-        <commons-collections.version>3.2.1</commons-collections.version>
+        <commons-collections.version>4.1</commons-collections.version>
         <commons-fileupload.version>1.2.2</commons-fileupload.version>
         <commons-io.version>2.4</commons-io.version>
-        <commons-lang3.version>3.1</commons-lang3.version>
-        <gson.version>2.2.4</gson.version>
+        <commons-lang3.version>3.5</commons-lang3.version>
+        <gson.version>2.8.1</gson.version>
         <itext.version>2.1.7</itext.version>
         <jsf.version>2.2.8</jsf.version>
-        <poi.version>3.9</poi.version>
+        <poi.version>3.13</poi.version>
 
         <primefaces.core.version>6.2-SNAPSHOT</primefaces.core.version>
         <primefaces.theme.version>1.0.10</primefaces.theme.version>
@@ -372,8 +372,8 @@
 
             <!-- Commons -->
             <dependency>
-                <groupId>commons-collections</groupId>
-                <artifactId>commons-collections</artifactId>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
                 <version>${commons-collections.version}</version>
             </dependency>
             <dependency>
