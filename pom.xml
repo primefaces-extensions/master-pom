@@ -3,7 +3,7 @@
 	<groupId>org.primefaces.extensions</groupId>
 	<artifactId>master-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>6.2-SNAPSHOT</version>
+	<version>6.2.RC1</version>
 	<name>PrimeFaces Extensions Master POM</name>
 	<description>
 		<![CDATA[PrimeFaces Extensions Master Project for Maven to define global project settings.]]>
@@ -57,7 +57,7 @@
 		<jsf.version>2.2.8</jsf.version>
 		<poi.version>3.17</poi.version>
 
-		<primefaces.core.version>6.2-SNAPSHOT</primefaces.core.version>
+		<primefaces.core.version>6.2.RC1</primefaces.core.version>
 		<primefaces.theme.version>1.0.10</primefaces.theme.version>
 		<primefaces.optimizer.version>2.3.0</primefaces.optimizer.version>
 
