@@ -158,6 +158,15 @@
 			</roles>
 			<timezone>+1</timezone>
 		</developer>
+		<developer>
+			<id>jepsar</id>
+			<name>Jasper de Vries</name>
+			<email>jepsar@gmail.com</email>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
 	</developers>
 
 	<build>
