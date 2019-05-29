@@ -60,6 +60,7 @@
 		<itext.version>2.1.7</itext.version>
 		<jsf.version>2.2.8</jsf.version>
 		<poi.version>3.17</poi.version>
+		<libphonenumber.version>8.10.7</libphonenumber.version>
 
 		<primefaces.core.version>7.0</primefaces.core.version>
 		<primefaces.theme.version>1.0.10</primefaces.theme.version>
@@ -448,6 +449,13 @@
 				<groupId>com.google.code.gson</groupId>
 				<artifactId>gson</artifactId>
 				<version>${gson.version}</version>
+			</dependency>
+
+			<!-- InputPhone dependencies -->
+			<dependency>
+				<groupId>com.googlecode.libphonenumber</groupId>
+				<artifactId>libphonenumber</artifactId>
+				<version>${libphonenumber.version}</version>
 			</dependency>
 
 			<!-- Exporter dependencies -->
