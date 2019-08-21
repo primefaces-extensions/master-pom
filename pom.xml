@@ -60,7 +60,7 @@
 		<itext.version>2.1.7</itext.version>
 		<jsf.version>2.3.9</jsf.version>
 		<poi.version>3.17</poi.version>
-		<libphonenumber.version>8.10.7</libphonenumber.version>
+		<libphonenumber.version>8.10.17</libphonenumber.version>
 
 		<primefaces.core.version>7.0</primefaces.core.version>
 		<primefaces.optimizer.version>2.3.2</primefaces.optimizer.version>
