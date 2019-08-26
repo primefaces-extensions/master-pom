@@ -3,7 +3,7 @@
 	<groupId>org.primefaces.extensions</groupId>
 	<artifactId>master-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>7.0.2-SNAPSHOT</version>
+	<version>7.0.3-SNAPSHOT</version>
 	<name>PrimeFaces Extensions Master POM</name>
 	<description>
 		<![CDATA[PrimeFaces Extensions Master Project for Maven to define global project settings.]]>
@@ -256,12 +256,22 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>3.0.0</version>
+					<version>3.1.1</version>
 					<configuration>
 						<source>${java.version.source}</source>
 						<detectJavaApiLink>false</detectJavaApiLink>
 						<quiet>true</quiet>
 						<doclint>none</doclint>
+						<failOnError>false</failOnError>
+						<failOnWarning>false</failOnWarning>
+						<!-- Silence error javax.interceptor.InterceptorBinding not found -->
+						<additionalDependencies>
+							<additionalDependency>
+								<groupId>javax.inject</groupId>
+								<artifactId>javax.inject</artifactId>
+								<version>1</version>
+							</additionalDependency>
+						</additionalDependencies>
 					</configuration>
 				</plugin>
 				<plugin>
