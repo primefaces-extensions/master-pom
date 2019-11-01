@@ -3,7 +3,7 @@
 	<groupId>org.primefaces.extensions</groupId>
 	<artifactId>master-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>7.0.3-SNAPSHOT</version>
+	<version>7.1-SNAPSHOT</version>
 	<name>PrimeFaces Extensions Master POM</name>
 	<description>
 		<![CDATA[PrimeFaces Extensions Master Project for Maven to define global project settings.]]>
@@ -48,8 +48,8 @@
 
 	<properties>
 		<resources.dir.compressed>${project.build.directory}/classes/META-INF/resources/primefaces-extensions</resources.dir.compressed>
-		<java.version.source>1.7</java.version.source>
-		<java.version.target>1.7</java.version.target>
+		<java.version.source>1.8</java.version.source>
+		<java.version.target>1.8</java.version.target>
 		<project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
 
 		<commons-collections.version>4.4</commons-collections.version>
@@ -62,7 +62,7 @@
 		<poi.version>3.17</poi.version>
 		<libphonenumber.version>8.10.17</libphonenumber.version>
 
-		<primefaces.core.version>7.0</primefaces.core.version>
+		<primefaces.core.version>7.1-SNAPSHOT</primefaces.core.version>
 		<primefaces.optimizer.version>2.3.2</primefaces.optimizer.version>
 
 		<withoutCompress>true</withoutCompress>
