@@ -66,9 +66,6 @@
 		<primefaces.optimizer.version>2.3.2</primefaces.optimizer.version>
 
 		<withoutCompress>true</withoutCompress>
-		<sourceMap.create>false</sourceMap.create>
-		<sourceMap.outputDir>${project.build.directory}/sourcemap/</sourceMap.outputDir>
-		<sourceMap.sourceMapRoot>http://localhost:8080/primeext-showcase/</sourceMap.sourceMapRoot>
 	</properties>
 
 	<developers>
@@ -556,14 +553,12 @@
 
 			<properties>
 				<withoutCompress>false</withoutCompress>
-				<sourceMap.create>true</sourceMap.create>
 			</properties>
 		</profile>
 		<profile>
 			<id>compress</id>
 			<properties>
 				<withoutCompress>false</withoutCompress>
-				<sourceMap.create>true</sourceMap.create>
 			</properties>
 		</profile>
 	</profiles>
