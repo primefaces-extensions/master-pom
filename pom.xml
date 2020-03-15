@@ -445,6 +445,7 @@
 				<groupId>com.googlecode.libphonenumber</groupId>
 				<artifactId>libphonenumber</artifactId>
 				<version>${libphonenumber.version}</version>
+				<optional>true</optional>
 			</dependency>
 
 			<!-- Exporter dependencies -->
