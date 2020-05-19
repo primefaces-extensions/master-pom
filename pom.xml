@@ -62,6 +62,7 @@
         <jakarta-faces.version>2.3.14</jakarta-faces.version>
         <poi.version>4.1.2</poi.version>
         <libphonenumber.version>8.12.1</libphonenumber.version>
+        <commonmark.version>0.14.0</commonmark.version>
 
         <primefaces.core.version>8.0</primefaces.core.version>
         <primefaces.optimizer.version>2.3.3</primefaces.optimizer.version>
@@ -446,6 +447,14 @@
                 <groupId>com.googlecode.libphonenumber</groupId>
                 <artifactId>libphonenumber</artifactId>
                 <version>${libphonenumber.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <!-- Content dependencies -->
+            <dependency>
+                <groupId>com.atlassian.commonmark</groupId>
+                <artifactId>commonmark</artifactId>
+                <version>${commonmark.version}</version>
                 <optional>true</optional>
             </dependency>
 
