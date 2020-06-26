@@ -64,7 +64,7 @@
         <libphonenumber.version>8.12.1</libphonenumber.version>
 
         <primefaces.core.version>8.0</primefaces.core.version>
-        <primefaces.optimizer.version>2.3.3</primefaces.optimizer.version>
+        <primefaces.optimizer.version>2.3.4</primefaces.optimizer.version>
 
         <withoutCompress>true</withoutCompress>
     </properties>
