@@ -103,33 +103,6 @@
             <timezone>America/New_York</timezone>
         </developer>
         <developer>
-            <id>mali</id>
-            <name>Nilesh Namdeo Mali</name>
-            <email>nileshmali86@gmail.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+5.30</timezone>
-        </developer>
-        <developer>
-            <id>mfenoglio</id>
-            <name>Mauricio Fenoglio</name>
-            <email>fenoloco@gmail.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>-3.0</timezone>
-        </developer>
-        <developer>
-            <id>pavol.slany</id>
-            <name>Pavol Slany</name>
-            <email>pavol.slany@gmail.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+1</timezone>
-        </developer>
-        <developer>
             <id>jonna</id>
             <name>Sudheer Jonna</name>
             <email>sudheer.jonna@gmail.com</email>
@@ -137,15 +110,6 @@
                 <role>Developer</role>
             </roles>
             <timezone>+5.30</timezone>
-        </developer>
-        <developer>
-            <id>francesco.strazzullo</id>
-            <name>Francesco Strazzullo</name>
-            <email>francesco.strazzullo86@gmail.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+1</timezone>
         </developer>
         <developer>
             <id>Rapster</id>
