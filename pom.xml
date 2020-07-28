@@ -4,7 +4,7 @@
     <groupId>org.primefaces.extensions</groupId>
     <artifactId>master-pom</artifactId>
     <packaging>pom</packaging>
-    <version>8.0.4-SNAPSHOT</version>
+    <version>8.0.4</version>
     <name>PrimeFaces Extensions Master POM</name>
     <description>
         <![CDATA[PrimeFaces Extensions Master Project for Maven to define global project settings.]]>
@@ -49,8 +49,8 @@
 
     <properties>
         <resources.dir.compressed>${project.build.directory}/classes/META-INF/resources/primefaces-extensions</resources.dir.compressed>
-        <java.version.source>1.8</java.version.source>
-        <java.version.target>1.8</java.version.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>iso-8859-1</project.build.sourceEncoding>
 
         <commons-collections.version>4.4</commons-collections.version>
@@ -198,8 +198,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.0</version>
                     <configuration>
-                        <source>${java.version.source}</source>
-                        <target>${java.version.target}</target>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <optimize>false</optimize>
                         <debug>true</debug>
@@ -224,8 +224,8 @@
                     <configuration>
                         <exclude>target</exclude>
                         <downloadSources>true</downloadSources>
-                        <jdkLevel>${java.version.source}</jdkLevel>
-                        <jdkName>${java.version.target}</jdkName>
+                        <jdkLevel>${maven.compiler.source}</jdkLevel>
+                        <jdkName>${maven.compiler.target}</jdkName>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -245,8 +245,8 @@
                                 <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             </manifest>
                             <manifestEntries>
-                                <X-Compile-Source>${java.version.source}</X-Compile-Source>
-                                <X-Compile-Target>${java.version.target}</X-Compile-Target>
+                                <X-Compile-Source>${maven.compiler.source}</X-Compile-Source>
+                                <X-Compile-Target>${maven.compiler.target}</X-Compile-Target>
                             </manifestEntries>
                         </archive>
                     </configuration>
@@ -256,7 +256,7 @@
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>3.1.1</version>
                     <configuration>
-                        <source>${java.version.source}</source>
+                        <source>${maven.compiler.source}</source>
                         <detectJavaApiLink>false</detectJavaApiLink>
                         <quiet>true</quiet>
                         <doclint>none</doclint>
